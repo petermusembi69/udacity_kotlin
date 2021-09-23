@@ -1,0 +1,6 @@
+com/example/android/colormyviews/databinding/ActivityMainBinding.java
+ com.example.android.colormyviews.databinding.ActivityMainBinding
+com/example/android/colormyviews/BuildConfig.java
+ com.example.android.colormyviews.BuildConfig
+com/example/android/colormyviews/DataBindingTriggerClass.java
+ com.example.android.colormyviews.DataBindingTriggerClass
