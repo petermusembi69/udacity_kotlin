@@ -32,5 +32,5 @@ data class SleepNight(
     var endTimeMilli: Long = startTimeMilli,
 
     @ColumnInfo(name = "quality_rating")
-    var sleepQality: Int = -1
+    var sleepQuality: Int = -1
 )
