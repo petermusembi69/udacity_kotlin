@@ -51,6 +51,7 @@ class GameFragment : Fragment() {
         viewModel = ViewModelProvider(this).get(GameViewModel::class.java)
 
         binding.gameViewModel = viewModel
+        binding.lifecycleOwner = this
 
         viewModel.eventGameFinish.observe(this, Observer { eventGameFinish ->
             if (eventGameFinish) {
@@ -58,16 +59,6 @@ class GameFragment : Fragment() {
                 findNavController(this).navigate(action)
                 viewModel.onGameFinishComplete()
             }
-        })
-        viewModel.score.observe(this, Observer { newScore ->
-            binding.scoreText.text = newScore.toString()
-        })
-        viewModel.word.observe(this, Observer { newWord ->
-            binding.wordText.text = newWord
-        })
-
-        viewModel.time.observe(this, Observer { newTime ->
-            binding.timerText.text = newTime
         })
 
         return binding.root
